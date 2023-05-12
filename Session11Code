@@ -1,0 +1,55 @@
+package session11;
+
+import java.util.Scanner;
+
+public class IcecreamBill {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int choice, icecream, sno=0, unitPrice=0, qty=0, price =0,total =0;
+		String billStr, icecream_name;
+		billStr = "======================================================\n\t\t\t Icecream Shop\n======================================================\nSNo\tIceCream\tUnitPrice\tQty\tPrice\n======================================================";
+		//System.out.println(billStr);
+		//create an infinite loop
+		while(true) {
+			sno = sno + 1;
+			System.out.println("Select an Icecream \n1.Chocolate\n2.Mango");
+			icecream = scanner.nextInt();
+			if (icecream == 1) {
+				System.out.println("You have chosen Chocolate");
+				icecream_name = "Chocolate";
+				unitPrice = 150;
+				System.out.println("How many Chocolate Icecreams:");
+				qty = scanner.nextInt();
+				price = qty * unitPrice;
+				total = total + price;
+				billStr = billStr + "\n" + sno + "\t" + icecream_name + "\t" + unitPrice+ "\t"+qty + "\t" + price+ "\n\t\t ToTal" + total;
+				System.out.println(billStr);
+			}else if (icecream ==2){
+				System.out.println("You have chosen Mango");
+				icecream_name = "Mango";
+				unitPrice = 300;
+				System.out.println("How many Mango Icecreams:");
+				qty = scanner.nextInt();
+				price = qty * unitPrice;
+				total = total + price;
+				billStr = billStr + "\n" + sno + "\t" + icecream_name + "\t" + unitPrice+ "\t"+qty + "\t" + price+ "\n\t\t ToTal" + total;
+				
+				System.out.println(billStr);
+				
+			}else {
+				System.out.println("Please Enter the right choice");
+			}
+			System.out.println("Do you want to choose one more icecream?");
+			System.out.println("Press 1.Yes or 2.No");
+			choice = scanner.nextInt();
+			if (choice == 2) {
+				break;
+			}//if
+		}//while
+		System.out.println(billStr);
+		System.out.println("Thank you for buying our delicious icecreams");
+		System.out.println("Please Visit again");
+	}
+
+}
