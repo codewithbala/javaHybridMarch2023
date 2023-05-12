@@ -1,0 +1,48 @@
+package session10;
+
+import java.util.Scanner;
+
+public class Rishhan {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String stop;
+		int sno =0,uprice, qty, totalprice, finalprice=0;
+		String icecream_name;
+		String billStr ;
+		billStr = "-------------------------\nSNo\tIcecreamName\tUnitPrice\tQty\tTotal Price \n=========================";
+		while(true) {
+			System.out.println(" Welcome to Bala Vajra Rishhan IceCream shop");
+			
+			System.out.println("Select an icecream\n1.Chocolate\n2.Mango");
+			int choice = scanner.nextInt();
+			if (choice ==1 ) {
+				icecream_name = "Chocolate";
+				uprice = 150;
+				sno++;
+				System.out.println("Enter Quantity:");
+				qty = scanner.nextInt(); 
+				totalprice = uprice *qty;
+				finalprice = finalprice + totalprice;
+				billStr = billStr + "\n " +sno+ "\t"+icecream_name+"\t"+uprice+"\t"+ qty+ "\t"+totalprice ;
+			}else if (choice == 2) {
+				icecream_name = "Mango";
+				uprice = 200;
+			}
+			
+			System.out.println(billStr);
+			System.out.println("\n\n\nType Y to stop or Press Any key to continue");
+			stop = scanner.next();
+			if (stop.equalsIgnoreCase("y"))
+			{
+				
+				
+				break;
+			}
+		}//while
+		System.out.println(billStr +"\n" + "\t \t \t\t\t" + "Total Price: "+finalprice +"\n");
+		
+		System.out.println("Thanks for Visting Vajra IceCream \n Visit Again");
+	}
+
+}
