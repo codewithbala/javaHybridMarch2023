@@ -1,0 +1,16 @@
+package session16;
+
+public class IceCreamMain {
+
+	public static void main(String[] args) {
+		//object creation for Icecream class
+		//Class_name object_Name = new Class_name();
+		IceCream icecream = new IceCream();
+		//access member variables
+		//object_name.variable_name
+		icecream.age = 12;
+		System.out.println(icecream.scoops[0]);
+		System.out.println(icecream.scoopPrice[0]);
+		System.out.println("Age is  :" +icecream.age);
+	}
+}
