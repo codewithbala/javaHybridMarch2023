@@ -1,0 +1,7 @@
+package session16;
+
+public class IceCream {
+	int age;
+	String scoops[] = {"Vanilla", "Chocolate", "Mango"};
+	float scoopPrice[]= {100.0F, 150.0F,200.0F};
+}
